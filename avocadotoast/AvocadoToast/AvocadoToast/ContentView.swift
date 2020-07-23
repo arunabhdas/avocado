@@ -9,7 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Avocado Toast")
+        
+        VStack {
+            Text("Hello")
+            Button(action: {
+                // TODO
+            }) {
+                Image("pear")
+                .renderingMode(.original)
+            }
+        }
+
+        
     }
 }
 
