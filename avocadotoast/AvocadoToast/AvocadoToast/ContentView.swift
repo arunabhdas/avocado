@@ -20,10 +20,7 @@ struct ContentView: View {
                     .renderingMode(.original)
                 }
             }
-        }
-
-
-        
+        } 
     }
 }
 
