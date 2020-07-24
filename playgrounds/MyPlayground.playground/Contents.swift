@@ -37,4 +37,6 @@ weatherPublisher.send(24)
 weatherPublisher.send(26)
 weatherPublisher.send(28)
 weatherPublisher.send(30)
+weatherPublisher.send(completion: Subscribers.Completion<WeatherError>.failure(.thingsJustHappen))
+
 weatherPublisher.send(18)
