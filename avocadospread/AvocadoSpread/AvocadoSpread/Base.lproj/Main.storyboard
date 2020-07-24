@@ -81,7 +81,29 @@
                     <view key="view" contentMode="scaleToFill" id="CKQ-1l-8uc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TJ-v4-27L" userLabel="appleButton">
+                                <rect key="frame" x="148" y="124" width="118" height="64"/>
+                                <state key="normal" title="Button" image="apple"/>
+                                <connections>
+                                    <action selector="appleButtonTapped:" destination="4os-A6-ggA" eventType="touchUpInside" id="A40-Gh-Xuq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syz-I4-Ly5" userLabel="orangeButton">
+                                <rect key="frame" x="148" y="268" width="118" height="64"/>
+                                <state key="normal" title="Button" image="orange"/>
+                                <connections>
+                                    <action selector="orangeButtonTapped:" destination="4os-A6-ggA" eventType="touchUpInside" id="sSr-CI-Ofg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Syz-I4-Ly5" firstAttribute="top" secondItem="4TJ-v4-27L" secondAttribute="bottom" constant="80" id="06y-B1-1ei"/>
+                            <constraint firstItem="Syz-I4-Ly5" firstAttribute="centerX" secondItem="CKQ-1l-8uc" secondAttribute="centerX" id="NWT-v7-ISO"/>
+                            <constraint firstItem="4TJ-v4-27L" firstAttribute="top" secondItem="zyx-SV-kJs" secondAttribute="top" constant="80" id="eBW-t8-hSj"/>
+                            <constraint firstItem="4TJ-v4-27L" firstAttribute="centerX" secondItem="CKQ-1l-8uc" secondAttribute="centerX" id="fbZ-c8-QCe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zyx-SV-kJs"/>
                     </view>
                 </viewController>
@@ -90,4 +112,8 @@
             <point key="canvasLocation" x="758" y="100"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apple" width="64" height="64"/>
+        <image name="orange" width="64" height="64"/>
+    </resources>
 </document>

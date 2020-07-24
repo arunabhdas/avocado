@@ -17,6 +17,14 @@ class SelectionViewController: UIViewController {
     }
     
 
+    @IBAction func appleButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func orangeButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
