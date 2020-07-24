@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var allowMessagesSwitch: UISwitch!
     @IBOutlet weak var sendMesageButton: UIButton!
     @IBOutlet weak var theMessageLabel: UILabel!
+    @IBOutlet weak var pickSelectionButton: UIButton!
     
     @Published var canSendMessages:Bool = false
     
@@ -56,5 +57,13 @@ class ViewController: UIViewController {
         canSendMessages = sender.isOn
     }
 
+    @IBAction func pickSelectionButtonTapped(_ sender: Any) {
+        let selectionVC = storyboard?.instantiateViewController(identifier: "SelectionViewController") as! SelectionViewController
+        selectionVC.modalPresentationStyle = .fullScreen
+        present(selectionVC, animated: true, completion: nil)
+        
+        
+        
+    }
 }
 

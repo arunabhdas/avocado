@@ -40,6 +40,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-gA-iFB" userLabel="pickSelectionButton">
+                                <rect key="frame" x="159" y="344" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pick Selection"/>
+                                <connections>
+                                    <action selector="pickSelectionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PP-dI-KSX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -57,13 +65,29 @@
                     <connections>
                         <outlet property="allowMessagesLabel" destination="sHr-m0-27f" id="cXD-3K-gKV"/>
                         <outlet property="allowMessagesSwitch" destination="Jaf-yZ-zh3" id="bsY-SK-vWf"/>
+                        <outlet property="pickSelectionButton" destination="iSf-gA-iFB" id="R4Q-uf-O0M"/>
                         <outlet property="sendMesageButton" destination="QD3-KT-U3g" id="sGy-sf-XAH"/>
                         <outlet property="theMessageLabel" destination="khL-dq-XYZ" id="5zn-rs-8Zg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="110"/>
+            <point key="canvasLocation" x="-84" y="100"/>
+        </scene>
+        <!--Selection View Controller-->
+        <scene sceneID="TaG-4M-lOw">
+            <objects>
+                <viewController storyboardIdentifier="SelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4os-A6-ggA" customClass="SelectionViewController" customModule="AvocadoSpread" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CKQ-1l-8uc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zyx-SV-kJs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADZ-PR-Y3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="100"/>
         </scene>
     </scenes>
 </document>
