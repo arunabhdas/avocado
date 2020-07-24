@@ -21,12 +21,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jaf-yZ-zh3">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jaf-yZ-zh3" userLabel="allowMessagesSwitch">
                                 <rect key="frame" x="273.5" y="124" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ye8-bz-ags"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD3-KT-U3g" userLabel="sendMessageButton">
                                 <rect key="frame" x="156.5" y="195" width="101" height="30"/>
                                 <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="sendMessageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wvd-y4-kEh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khL-dq-XYZ" userLabel="theMessageLabel">
                                 <rect key="frame" x="155.5" y="275" width="103" height="21"/>
@@ -48,6 +54,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="allowMessagesLabel" destination="sHr-m0-27f" id="cXD-3K-gKV"/>
+                        <outlet property="allowMessagesSwitch" destination="Jaf-yZ-zh3" id="bsY-SK-vWf"/>
+                        <outlet property="sendMesageButton" destination="QD3-KT-U3g" id="sGy-sf-XAH"/>
+                        <outlet property="theMessageLabel" destination="khL-dq-XYZ" id="5zn-rs-8Zg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
