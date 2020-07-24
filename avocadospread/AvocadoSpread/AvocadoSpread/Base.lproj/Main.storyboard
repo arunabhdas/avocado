@@ -40,12 +40,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-gA-iFB" userLabel="pickSelectionButton">
-                                <rect key="frame" x="159" y="344" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-gA-iFB" userLabel="pickSelectionButton">
+                                <rect key="frame" x="158.5" y="336" width="97" height="30"/>
                                 <state key="normal" title="Pick Selection"/>
                                 <connections>
                                     <action selector="pickSelectionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PP-dI-KSX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooy-18-8Ne" userLabel="pickChoiceButton">
+                                <rect key="frame" x="166.5" y="406" width="81" height="30"/>
+                                <state key="normal" title="Pick Choice"/>
+                                <connections>
+                                    <action selector="pickChoiceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="25H-LF-6Y9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,18 +59,25 @@
                         <constraints>
                             <constraint firstItem="QD3-KT-U3g" firstAttribute="top" secondItem="sHr-m0-27f" secondAttribute="bottom" constant="50" id="1IK-Gg-Aif"/>
                             <constraint firstItem="QD3-KT-U3g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Vz-NM-xjl"/>
+                            <constraint firstItem="Ooy-18-8Ne" firstAttribute="top" secondItem="iSf-gA-iFB" secondAttribute="bottom" constant="40" id="JaM-Jg-eNq"/>
+                            <constraint firstItem="iSf-gA-iFB" firstAttribute="top" secondItem="khL-dq-XYZ" secondAttribute="bottom" constant="40" id="Krf-Nz-sxV"/>
                             <constraint firstItem="khL-dq-XYZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPs-ic-ZqW"/>
+                            <constraint firstItem="Ooy-18-8Ne" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UA4-jy-iOu"/>
+                            <constraint firstItem="Ooy-18-8Ne" firstAttribute="top" secondItem="iSf-gA-iFB" secondAttribute="bottom" constant="40" id="Xaq-cy-Vyl"/>
                             <constraint firstItem="sHr-m0-27f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="as3-mx-nEH"/>
+                            <constraint firstItem="iSf-gA-iFB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4h-SZ-xHz"/>
                             <constraint firstItem="Jaf-yZ-zh3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="gej-Su-cW6"/>
                             <constraint firstItem="Jaf-yZ-zh3" firstAttribute="leading" secondItem="sHr-m0-27f" secondAttribute="trailing" constant="5" id="kZC-aR-0Qc"/>
                             <constraint firstItem="sHr-m0-27f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="my4-mg-HiH"/>
                             <constraint firstItem="khL-dq-XYZ" firstAttribute="top" secondItem="QD3-KT-U3g" secondAttribute="bottom" constant="50" id="nGO-dH-YTO"/>
+                            <constraint firstItem="Ooy-18-8Ne" firstAttribute="top" secondItem="iSf-gA-iFB" secondAttribute="bottom" constant="40" id="zo1-jF-O0B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="allowMessagesLabel" destination="sHr-m0-27f" id="cXD-3K-gKV"/>
                         <outlet property="allowMessagesSwitch" destination="Jaf-yZ-zh3" id="bsY-SK-vWf"/>
+                        <outlet property="pickChoiceButton" destination="Ooy-18-8Ne" id="wOZ-Js-3hK"/>
                         <outlet property="pickSelectionButton" destination="iSf-gA-iFB" id="R4Q-uf-O0M"/>
                         <outlet property="sendMesageButton" destination="QD3-KT-U3g" id="sGy-sf-XAH"/>
                         <outlet property="theMessageLabel" destination="khL-dq-XYZ" id="5zn-rs-8Zg"/>
@@ -73,6 +86,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="100"/>
+        </scene>
+        <!--Choice View Controller-->
+        <scene sceneID="nXy-bN-eI8">
+            <objects>
+                <viewController storyboardIdentifier="ChoiceViewController" id="74f-xA-ojl" customClass="ChoiceViewController" customModule="AvocadoSpread" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3xT-Ja-LZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv0-zG-Etm" userLabel="firstButton">
+                                <rect key="frame" x="148" y="124" width="118" height="64"/>
+                                <state key="normal" title="Button" image="cherry"/>
+                                <connections>
+                                    <action selector="firstButtonTapped:" destination="74f-xA-ojl" eventType="touchUpInside" id="QBL-1W-8Qj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y57-LM-MYu" userLabel="secondButton">
+                                <rect key="frame" x="148" y="268" width="118" height="64"/>
+                                <state key="normal" title="Button" image="peach"/>
+                                <connections>
+                                    <action selector="secondButtonTapped:" destination="74f-xA-ojl" eventType="touchUpInside" id="8i8-jy-SvW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fv0-zG-Etm" firstAttribute="centerX" secondItem="3xT-Ja-LZ0" secondAttribute="centerX" id="Uc7-CB-PUw"/>
+                            <constraint firstItem="y57-LM-MYu" firstAttribute="centerX" secondItem="3xT-Ja-LZ0" secondAttribute="centerX" id="Uea-YH-12h"/>
+                            <constraint firstItem="y57-LM-MYu" firstAttribute="top" secondItem="Fv0-zG-Etm" secondAttribute="bottom" constant="80" id="hs6-rr-c4K"/>
+                            <constraint firstItem="Fv0-zG-Etm" firstAttribute="top" secondItem="aTa-hk-QFd" secondAttribute="top" constant="80" id="kTR-gA-K4v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aTa-hk-QFd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIj-Fx-hwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="761"/>
         </scene>
         <!--Selection View Controller-->
         <scene sceneID="TaG-4M-lOw">
@@ -114,6 +164,8 @@
     </scenes>
     <resources>
         <image name="apple" width="64" height="64"/>
+        <image name="cherry" width="64" height="64"/>
         <image name="orange" width="64" height="64"/>
+        <image name="peach" width="64" height="64"/>
     </resources>
 </document>
