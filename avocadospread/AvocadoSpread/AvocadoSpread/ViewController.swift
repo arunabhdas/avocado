@@ -18,6 +18,8 @@ struct Message {
 
 class ViewController: UIViewController {
 
+    
+
     @IBOutlet weak var allowMessagesLabel: UILabel!
     @IBOutlet weak var allowMessagesSwitch: UISwitch!
     @IBOutlet weak var sendMesageButton: UIButton!
@@ -60,10 +62,21 @@ class ViewController: UIViewController {
     @IBAction func pickSelectionButtonTapped(_ sender: Any) {
         let selectionVC = storyboard?.instantiateViewController(identifier: "SelectionViewController") as! SelectionViewController
         selectionVC.modalPresentationStyle = .fullScreen
+        selectionVC.selectionDelegate = self
         present(selectionVC, animated: true, completion: nil)
         
         
         
     }
+
 }
 
+extension ViewController: ChoiceSelectionDelegate {
+    //MARK:- ChoiceSelectionDelegate
+    
+    func didTapChoice(image: UIImage, name: String, color: UIColor) {
+        // self.pickSelectionButton.setImage(image, for: .normal)
+        self.view.backgroundColor = color
+        self.pickSelectionButton.setTitle(name, for: .normal)
+    }
+}

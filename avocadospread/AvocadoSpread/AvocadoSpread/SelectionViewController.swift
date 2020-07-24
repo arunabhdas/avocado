@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol ChoiceSelectionDelegate {
+    func didTapChoice(image: UIImage, name: String, color: UIColor)
+}
+
 class SelectionViewController: UIViewController {
 
+    var selectionDelegate: ChoiceSelectionDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,10 +24,12 @@ class SelectionViewController: UIViewController {
     
 
     @IBAction func appleButtonTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(image: UIImage(imageLiteralResourceName: "apple"), name: "apple", color: .red)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func orangeButtonTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(image: UIImage(imageLiteralResourceName: "orange"), name: "orange", color: .orange)
         dismiss(animated: true, completion: nil)
     }
     
