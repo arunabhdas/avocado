@@ -56,6 +56,11 @@ class ViewController: UIViewController {
     }
     
     @objc func updateImage(notification: NSNotification) {
+        let isFirst = notification.name.rawValue == Constants.Notifs.oneNotificationKey
+        
+        let imageName = isFirst ? "cherry" : "peach"
+        
+        self.pickChoiceButton.setImage(UIImage(imageLiteralResourceName: imageName), for: .normal)
         
     }
     
@@ -64,7 +69,10 @@ class ViewController: UIViewController {
     }
     
     @objc func updateBackground(notification: NSNotification) {
+        let isFirst = notification.name.rawValue == Constants.Notifs.oneNotificationKey
         
+        let colorBackground = isFirst ? UIColor.red : UIColor.orange
+        self.view.backgroundColor = colorBackground
     }
     
     deinit {
